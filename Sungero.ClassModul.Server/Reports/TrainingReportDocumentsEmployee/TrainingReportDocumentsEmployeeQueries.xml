@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="SelectDocuments">
+    <default><![CDATA[select 
+doc.id as DocumentId, 
+doc.created as DateCreated, 
+empl.name as AutorDocument, 
+doc.name as DocumentName, 
+kind.name as KindDocument,
+doc.regnumber_docflow_sungero as RegNumber
+from sungero_content_edoc doc
+join sungero_core_recipient empl
+on doc.author = empl.Id
+join sungero_docflow_documentkind kind
+on doc.documentkind_docflow_sungero = kind.Id 
+where  author = @EmployeeId and doc.created  >= @DateStart and doc.created  <= @DateEnd
+order by created desc
+
+]]></default>
+  </query>
+</queries>

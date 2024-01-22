@@ -1,0 +1,49 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "05052fe5-9c6c-48fe-bad8-b4945c78a296",
+  "Name": "TrainingReportDocumentsEmployee",
+  "AssociatedGuid": "b8491e9e-084d-4fcb-b33c-1e421f4383d6",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Excel",
+  "ExportFormats": [
+    "Excel"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteClient"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "ClassModulTrainingReportDocumentsEmployee",
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "ExportFormats",
+    "DefaultExportFormat",
+    "HandledEvents",
+    "Parameters",
+    "DisplayName"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "5017c8b1-eb8b-451a-9cd6-38e1845ea25a",
+      "Name": "EmployeeId",
+      "InternalDataTypeName": "System.Int32",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "168ad8fe-21f7-444d-b46e-cf0111e3e773",
+      "Name": "DateStart",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "db7bc668-d066-4d6b-a38e-f0f359e0467e",
+      "Name": "DateEnd",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "Versions": []
+}

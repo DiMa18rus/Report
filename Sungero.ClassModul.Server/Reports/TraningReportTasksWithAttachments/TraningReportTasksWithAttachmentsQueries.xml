@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="TasksForReport">
+    <default><![CDATA[select 
+tasks.Subject as TaskSubject,
+attachment.AttachmentId as AttachmentId
+from sungero_wf_task tasks
+left join sungero_wf_attachment attachment on
+tasks.Id = attachment.Task
+where
+attachment.AttachmentId is not null and
+tasks.Created >= @StartDate and tasks.Created <= @EndDate]]></default>
+  </query>
+</queries>

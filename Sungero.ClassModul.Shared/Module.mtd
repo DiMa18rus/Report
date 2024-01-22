@@ -1,0 +1,196 @@
+{
+  "$type": "Sungero.Metadata.ModuleMetadata, Sungero.Metadata",
+  "NameGuid": "b8491e9e-084d-4fcb-b33c-1e421f4383d6",
+  "Name": "ClassModul",
+  "AsyncHandlers": [],
+  "ClientAssemblyName": "Sungero.ClassModul.Client",
+  "ClientBaseAssemblyName": "Sungero.ClassModul.ClientBase",
+  "ClientBaseNamespace": "Sungero.ClassModul.ClientBase",
+  "ClientNamespace": "Sungero.ClassModul.Client",
+  "Code": "ClassMo",
+  "CompanyCode": "Sungero",
+  "Cover": {
+    "NameGuid": "db198d66-f2d3-427a-90d9-efa9cc403561",
+    "Actions": [
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "0c603b14-220f-4555-b0e2-defd08839d6b",
+        "Name": "StartReport",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "IsVisibleInDesktopClient": false,
+        "ReportId": "6f9c79f4-8d59-4b9c-94f0-aaa9a5a92917"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "2615c73f-9e9a-46e7-b294-a9236c2fa2f6",
+        "Name": "StartTraningReportTasksWithAttachments",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "PreviousItemGuid": "d2ac02f7-9ef0-4777-9566-f960e7f11ae8",
+        "ReportId": "842ccc2e-1129-495e-afa0-59171d4d37ae"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "7ea8bf37-1415-4fd3-a615-d1b00ad1e46f",
+        "Name": "StartReportNew",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "PreviousItemGuid": "0c603b14-220f-4555-b0e2-defd08839d6b",
+        "ReportId": "8daef6e5-f61e-429a-b058-a2d81ace873d"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "d2ac02f7-9ef0-4777-9566-f960e7f11ae8",
+        "Name": "Action",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "PreviousItemGuid": "7ea8bf37-1415-4fd3-a615-d1b00ad1e46f",
+        "ReportId": "0deeb0ac-d0a4-4a9f-8c7a-1e92088ae2ff"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "ec7fbaa9-e4f4-441c-9c87-17cb733cec53",
+        "Name": "StartTraningReportConnectedDepartmentOnEDM",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "PreviousItemGuid": "ee725e91-4aa5-4d40-b247-4d3210482157",
+        "ReportId": "05f7f8e2-cb64-4a45-b31e-119119b3ec76"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "ee725e91-4aa5-4d40-b247-4d3210482157",
+        "Name": "StartTrainingReportDocumentsEmployee",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "PreviousItemGuid": "2615c73f-9e9a-46e7-b294-a9236c2fa2f6",
+        "ReportId": "05052fe5-9c6c-48fe-bad8-b4945c78a296"
+      }
+    ],
+    "Background": null,
+    "Footer": {
+      "NameGuid": "62f36b07-c3e8-405e-993d-6d7cda8d72b8",
+      "BackgroundPosition": "Stretch"
+    },
+    "Groups": [
+      {
+        "NameGuid": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "Name": "ReportGroup",
+        "BackgroundPosition": "Stretch",
+        "TabId": "dfe57901-4025-4077-98c3-d5eeb3937cb3"
+      }
+    ],
+    "Header": {
+      "NameGuid": "e8934f66-d35e-4482-a313-b53c5eb0c911",
+      "BackgroundPosition": "Stretch"
+    },
+    "Tabs": [
+      {
+        "NameGuid": "dfe57901-4025-4077-98c3-d5eeb3937cb3",
+        "Name": "Report"
+      }
+    ]
+  },
+  "Dependencies": [
+    {
+      "Id": "53edfe07-6a8f-413a-8839-fa6d753c4869",
+      "IsSolutionModule": true,
+      "MaxVersion": "",
+      "MinVersion": ""
+    }
+  ],
+  "ExplorerTreeOrder": [
+    {
+      "ItemId": "271898c8-18ca-4192-9892-e27b273ce5fc"
+    },
+    {
+      "ItemId": "6f9c79f4-8d59-4b9c-94f0-aaa9a5a92917",
+      "PreviousItemId": "271898c8-18ca-4192-9892-e27b273ce5fc"
+    },
+    {
+      "ItemId": "8daef6e5-f61e-429a-b058-a2d81ace873d",
+      "PreviousItemId": "6f9c79f4-8d59-4b9c-94f0-aaa9a5a92917"
+    },
+    {
+      "ItemId": "0deeb0ac-d0a4-4a9f-8c7a-1e92088ae2ff",
+      "PreviousItemId": "8daef6e5-f61e-429a-b058-a2d81ace873d"
+    },
+    {
+      "ItemId": "05052fe5-9c6c-48fe-bad8-b4945c78a296",
+      "PreviousItemId": "0deeb0ac-d0a4-4a9f-8c7a-1e92088ae2ff"
+    },
+    {
+      "ItemId": "842ccc2e-1129-495e-afa0-59171d4d37ae",
+      "PreviousItemId": "05052fe5-9c6c-48fe-bad8-b4945c78a296"
+    },
+    {
+      "ItemId": "05f7f8e2-cb64-4a45-b31e-119119b3ec76",
+      "PreviousItemId": "842ccc2e-1129-495e-afa0-59171d4d37ae"
+    }
+  ],
+  "HandledEvents": [
+    "InitializingServer"
+  ],
+  "IconResourcesKeys": [],
+  "Importance": "Medium",
+  "InterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "InterfaceNamespace": "Sungero.ClassModul",
+  "Libraries": [
+    {
+      "NameGuid": "c10e7327-9e0d-43ed-944b-273321f1108e",
+      "Name": "PdfConverter",
+      "Scope": "Both"
+    }
+  ],
+  "PublicFunctions": [
+    {
+      "Name": "ChecktDocForFormatPdf",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IInternalDocumentBase",
+          "ParameterTypeFullName": "Sungero.Docflow.IInternalDocumentBase, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.Boolean",
+      "ReturnTypeFullName": "System.Boolean"
+    },
+    {
+      "Name": "ConvertDocToPdf",
+      "IsRemote": true,
+      "Parameters": [
+        {
+          "Name": "document",
+          "ParameterType": "global::Sungero.Docflow.IInternalDocumentBase",
+          "ParameterTypeFullName": "Sungero.Docflow.IInternalDocumentBase, Sungero.Domain.Interfaces"
+        }
+      ],
+      "Placement": "Shared",
+      "ReturnType": "global::System.String",
+      "ReturnTypeFullName": "System.String"
+    }
+  ],
+  "PublicStructures": [],
+  "ResourceInterfaceAssemblyName": "Sungero.Domain.Interfaces",
+  "ResourceInterfaceNamespace": "Sungero.ClassModul",
+  "ResourcesKeys": [],
+  "ServerAssemblyName": "Sungero.ClassModul.Server",
+  "ServerNamespace": "Sungero.ClassModul.Server",
+  "SharedAssemblyName": "Sungero.ClassModul.Shared",
+  "SharedNamespace": "Sungero.ClassModul.Shared",
+  "SpecialFolders": [],
+  "Version": "0.0.1.0",
+  "Widgets": [],
+  "Versions": [
+    {
+      "Type": "ModuleMetadata",
+      "Number": 8
+    },
+    {
+      "Type": "DomainApi",
+      "Number": 3
+    }
+  ]
+}

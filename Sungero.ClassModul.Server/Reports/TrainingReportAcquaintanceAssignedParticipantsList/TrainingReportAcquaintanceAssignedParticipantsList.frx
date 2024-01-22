@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Content.Shared&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;Sungero.Workflow.Interfaces&#13;&#10;DirRX.LRD.Shared&#13;&#10;DirRX.LRD.Server&#13;&#10;DirRX.CustomHRSolution.Shared&#13;&#10;DirRX.CustomHRSolution.Server&#13;&#10;Sungero.ClassModul.Shared&#13;&#10;Sungero.ClassModul.Server" ReportInfo.CreatorVersion="2020.2.12.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using DirRX.LRD;
+using DirRX.CustomHRSolution;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = Sungero.ClassModul.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {  
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="SourceTable" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDataFromTable}">
+        <Column Name="ReportSessionId" DataType="System.String" PropName="Column"/>
+        <Column Name="FullName" DataType="System.String" PropName="Column"/>
+        <Column Name="Consent" DataType="System.String" PropName="Column"/>
+        <Column Name="JobTitle" DataType="System.String" PropName="Column"/>
+        <Column Name="Department" DataType="System.String" PropName="Column"/>
+        <Column Name="PersonnelNumber" DataType="System.String" PropName="Column"/>
+        <Column Name="LRDListNames" DataType="System.String" PropName="Column"/>
+        <Column Name="JobTitleId" DataType="System.String" PropName="Column"/>
+        <Column Name="TypicalPosition" DataType="System.String" PropName="Column"/>
+        <Column Name="TypicalPositionId" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+      <TableDataSource Name="Table1" Alias="LRDListsHyperLinks" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDataFromLRDListsHyperLinkTable}">
+        <Column Name="LRDListName" DataType="System.String" PropName="Column"/>
+        <Column Name="LRDListHyperLink" DataType="System.String" PropName="Column"/>
+        <Column Name="ReportSessionId" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="ReportSessionId" DataType="16" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="68ed425f-cf89-496c-97da-56760f70806c" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Document" Id="1ff22731-ba3d-4a2c-b96f-073125cd6fa4" IsRequired="false" IsCollection="false" InternalDataType="DirRX.LRD.ILocalRegulationDocument, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="e243af02-cf12-4b8f-85da-8e6207863092"/>
+    <SungeroParameter Name="ReportSessionId" Id="1916f16a-afdc-49c3-ba69-d347bd922885" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Title" Id="e3eb15f8-0356-46f5-98f0-7c9aaa4b673f" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportDate" Id="4c13cb53-399a-4de9-8db3-34c0feadeb89" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DocumentName" Id="665cef2f-8b2c-44ad-ae65-13692ac7a406" IsRequired="true" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BusinessUnit" Id="46eca714-1ae1-497f-b5e4-39d6cb02165b" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ListLNA" Id="b81b0dc1-b351-4f2b-be95-98c792519032" IsRequired="false" IsCollection="false" InternalDataType="DirRX.CustomHRSolution.IListsLNAForRecruitmentAndTransfer, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="c1eb975c-66c9-497a-87b2-39a91479efd6"/>
+    <SungeroParameter Name="IsList" Id="ba81e10e-2c9f-46b7-9f27-a826c15f702e" IsRequired="false" IsCollection="false" InternalDataType="System.Boolean" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="LRDListLinks" Tag="Ссылки на списки ЛНА" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle2" Width="718.2" Height="198.45" Guides="170.1">
+      <TextObject Name="Text35" Top="141.75" Width="718.2" Height="28.35" Text="[DirRX.LRDManagement.Reports.Resources.AcquaintanceAssignedParticipantsList.LRDListsPageTitle]" VertAlign="Center" Font="Arial, 14.25pt">
+        <Highlight>
+          <Condition Expression="[IsList] == true" Visible="false" Font="Arial, 10pt"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text43" Top="141.75" Width="718.2" Height="28.35" Text="[DirRX.CustomHRLite.Reports.Resources.AcquaintanceAssignedParticipantsList.LRDListsPageTitle]" VertAlign="Center" Font="Arial, 14.25pt">
+        <Highlight>
+          <Condition Expression="[IsList] != true" Visible="false" Font="Arial, 10pt"/>
+        </Highlight>
+      </TextObject>
+      <TextObject Name="Text44" Width="718.2" Height="28.35" Text="[Title]" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text45" Top="28.35" Width="718.2" Height="28.35" Text="[DocumentName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text46" Top="56.7" Width="718.2" Height="28.35" Text="[BusinessUnit]" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+      <TextObject Name="Text47" Top="85.05" Width="718.2" Height="28.35" Text="[ReportDate]" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data2" Top="202.45" Width="718.2" Height="28.35" DataSource="Table1">
+      <TextObject Name="Text1" Width="718.2" Height="28.35" Cursor="Hand" Hyperlink.Expression="[LRDListsHyperLinks.LRDListHyperLink]" Text="[LRDListsHyperLinks.LRDListName]" VertAlign="Center" Font="Arial, 9.75pt, style=Underline" TextFill.Color="Blue"/>
+    </DataBand>
+  </ReportPage>
+  <ReportPage Name="GeneralReport" Tag="Отчет" Landscape="true" PaperWidth="420" PaperHeight="210" RawPaperSize="0" FirstPageSource="15" OtherPagesSource="15" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="1512" Height="47.25" Guides="113.4,85.05,122.85,170.1">
+      <TextObject Name="Text12" Left="113.4" Width="255.15" Height="47.25" Border.Lines="All" Text="[DirRX.LRDManagement.Reports.Resources.AcquaintanceAssignedParticipantsList.FullName]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text13" Width="113.4" Height="47.25" Border.Lines="All" Text="[DirRX.LRDManagement.Reports.Resources.AcquaintanceAssignedParticipantsList.PersonnelNumber]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text14" Left="368.55" Width="122.85" Height="47.25" Border.Lines="All" Text="[DirRX.LRDManagement.Reports.Resources.AcquaintanceAssignedParticipantsList.Consent]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text15" Left="737.1" Width="189" Height="47.25" Border.Lines="All" Text="[DirRX.CustomHRLite.Reports.Resources.AcquaintanceAssignedParticipantsList.JobTitle]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text17" Left="491.4" Width="189" Height="47.25" Border.Lines="All" Text="[DirRX.LRDManagement.Reports.Resources.AcquaintanceAssignedParticipantsList.Department]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text26" Left="1171.8" Width="340.2" Height="47.25" Border.Lines="All" Text="[DirRX.LRDManagement.Reports.Resources.AcquaintanceAssignedParticipantsList.LRDList]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text38" Left="982.8" Width="189" Height="47.25" Border.Lines="All" Text="[DirRX.CustomHRLite.Reports.Resources.AcquaintanceAssignedParticipantsList.TypicalPosition]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text39" Left="926.1" Width="56.7" Height="47.25" Border.Lines="All" Text="[DirRX.CustomHRLite.Reports.Resources.AcquaintanceAssignedParticipantsList.TypicalPositionId]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text42" Left="680.4" Width="56.7" Height="47.25" Border.Lines="All" Text="[DirRX.CustomHRLite.Reports.Resources.AcquaintanceAssignedParticipantsList.JobTitleId]" HorzAlign="Center" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ReportTitleBand>
+    <DataBand Name="Data1" Top="51.25" Width="1512" Height="28.35" CanGrow="true" Guides="0,28.35" DataSource="Table">
+      <TextObject Name="Text27" Left="113.4" Width="255.15" Height="28.35" Border.Lines="All" Text="[SourceTable.FullName]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text28" Width="113.4" Height="28.35" Border.Lines="All" Text="[SourceTable.PersonnelNumber]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text29" Left="368.55" Width="122.85" Height="28.35" Border.Lines="All" Text="[SourceTable.Consent]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text30" Left="737.1" Width="189" Height="28.35" Border.Lines="All" Text="[SourceTable.JobTitle]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text32" Left="491.4" Width="189" Height="28.35" Border.Lines="All" Text="[SourceTable.Department]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text36" Left="1171.8" Width="340.2" Height="28.35" Border.Lines="All" Text="[SourceTable.LRDListNames]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text37" Left="982.8" Width="189" Height="28.35" Border.Lines="All" Text="[SourceTable.TypicalPosition]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text40" Left="926.1" Width="56.7" Height="28.35" Border.Lines="All" Text="[SourceTable.TypicalPositionId]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <TextObject Name="Text41" Left="680.4" Width="56.7" Height="28.35" Border.Lines="All" Text="[SourceTable.JobTitleId]" VertAlign="Center" Font="Arial, 9.75pt"/>
+      <Sort>
+        <Sort Expression="[SourceTable.FullName]"/>
+        <Sort Expression="[SourceTable.PersonnelNumber]"/>
+        <Sort Expression="[SourceTable.Department]"/>
+      </Sort>
+    </DataBand>
+  </ReportPage>
+</Report>

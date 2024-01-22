@@ -1,0 +1,89 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "0deeb0ac-d0a4-4a9f-8c7a-1e92088ae2ff",
+  "Name": "TrainingReportAcquaintanceAssignedParticipantsList",
+  "AssociatedGuid": "b8491e9e-084d-4fcb-b33c-1e421f4383d6",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Excel",
+  "ExportFormats": [
+    "Excel"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteServer",
+    "AfterExecuteServer",
+    "BeforeExecuteClient"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "LRDManagementAcquaintanceAssignedParticipantsList",
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "DisplayName",
+    "ExportFormats",
+    "DefaultExportFormat",
+    "Parameters",
+    "HandledEvents"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "1ff22731-ba3d-4a2c-b96f-073125cd6fa4",
+      "Name": "Document",
+      "EntityType": "e243af02-cf12-4b8f-85da-8e6207863092",
+      "InternalDataTypeName": "DirRX.LRD.ILocalRegulationDocument, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "1916f16a-afdc-49c3-ba69-d347bd922885",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "e3eb15f8-0356-46f5-98f0-7c9aaa4b673f",
+      "Name": "Title",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "4c13cb53-399a-4de9-8db3-34c0feadeb89",
+      "Name": "ReportDate",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "665cef2f-8b2c-44ad-ae65-13692ac7a406",
+      "Name": "DocumentName",
+      "InternalDataTypeName": "System.String",
+      "IsRequired": true
+    },
+    {
+      "NameGuid": "46eca714-1ae1-497f-b5e4-39d6cb02165b",
+      "Name": "BusinessUnit",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "b81b0dc1-b351-4f2b-be95-98c792519032",
+      "Name": "ListLNA",
+      "EntityType": "c1eb975c-66c9-497a-87b2-39a91479efd6",
+      "InternalDataTypeName": "DirRX.CustomHRSolution.IListsLNAForRecruitmentAndTransfer, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "ba81e10e-2c9f-46b7-9f27-a826c15f702e",
+      "Name": "IsList",
+      "InternalDataTypeName": "System.Boolean",
+      "IsSimpleDataType": true
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [
+    "FullName",
+    "PersonnelNumber",
+    "Consent",
+    "Department",
+    "JobTitle",
+    "LRDList",
+    "GeneralReportTitle",
+    "LRDListsPageTitle",
+    "TypicalPosition",
+    "TypicalPositionId",
+    "JobTitleId"
+  ],
+  "Versions": []
+}

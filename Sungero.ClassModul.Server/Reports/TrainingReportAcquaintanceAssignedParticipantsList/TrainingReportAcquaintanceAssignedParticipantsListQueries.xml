@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="AcquaintanceAssignedParticipantsListReportTable">
+    <mssql><![CDATA[create table {0}
+  ([LRDListNames] nvarchar(max),
+   [JobTitle] nvarchar(max),
+   [JobTitleId] nvarchar(max),
+   [TypicalPosition] nvarchar(max),
+   [TypicalPositionId] nvarchar(max),
+   [Department] nvarchar(max),
+   [Consent] nvarchar(max),
+   [PersonnelNumber] nvarchar(max),
+   [FullName] nvarchar(max),
+   [ReportSessionId] varchar(256) NOT NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+  (LRDListNames citext,
+   JobTitle citext,
+   JobTitleId citext,
+   TypicalPosition citext,
+   TypicalPositionId citext,
+   Department citext,
+   Consent citext,
+   PersonnelNumber citext,
+   FullName citext,
+   ReportSessionId citext NOT NULL)]]></postgres>
+  </query>
+  <query key="SelectDataFromTable">
+    <default><![CDATA[select *
+from LRDManagement_Reports_AcqParticipants temp
+where ReportSessionId = @ReportSessionId
+order by fullname desc]]></default>
+  </query>
+  <query key="LRDListsHyperLinksTable">
+    <mssql><![CDATA[create table {0}
+  ([LRDListName] nvarchar(max),
+   [LRDListHyperLink] nvarchar(max),
+   [ReportSessionId] varchar(256) NOT NULL)]]></mssql>
+    <postgres><![CDATA[create table {0}
+  (LRDListName citext,
+   LRDListHyperLink citext,
+   ReportSessionId citext NOT NULL)]]></postgres>
+  </query>
+  <query key="SelectDataFromLRDListsHyperLinkTable">
+    <default><![CDATA[select *
+from LRDManagement_Reports_LRDListsHyperLinks
+where ReportSessionId = @ReportSessionId
+order by LRDListName desc]]></default>
+  </query>
+</queries>

@@ -1,0 +1,56 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "05f7f8e2-cb64-4a45-b31e-119119b3ec76",
+  "Name": "TrainingReportConnectedDepartmentOnEDM",
+  "AssociatedGuid": "b8491e9e-084d-4fcb-b33c-1e421f4383d6",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Excel",
+  "ExportFormats": [
+    "Excel"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteServer",
+    "AfterExecuteServer"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "ClassModulTrainingReportConnectedDepartmentOnEDM",
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "DataSources",
+    "Parameters",
+    "DisplayName",
+    "ExportFormats",
+    "DefaultExportFormat",
+    "HandledEvents"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "bce16bff-9847-49fa-9a4f-f46f150a6362",
+      "Name": "DateReport",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "1c9468b3-4955-415f-897d-076d3424f962",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "18825a88-0cb4-424d-afaa-e971bbc99d8b",
+      "Name": "PercentEmpValidSIg",
+      "InternalDataTypeName": "System.Double",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "0274d11f-1087-4715-aab2-47defbaae30f",
+      "Name": "PercentEmpAgreToEDM",
+      "InternalDataTypeName": "System.Double",
+      "IsSimpleDataType": true
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "Versions": []
+}

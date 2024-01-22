@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<queries>
+  <query key="CreateTableConnectedDepartmentOnEDM">
+    <postgres><![CDATA[create table {0}
+  (BusinessUnit citext,
+   AeraType citext,
+   Division citext,
+   Region citext,
+   Cluster citext,
+   Cod citext,
+   CountEmployeeOnDepartment integer,
+   CountEmployeeAgreedToEDM integer,
+   PercentEmployeeAgreedToEDM integer,
+   CountEmployeeToValidSignature integer,
+   PercentEmployeeToValidSignature integer,
+   ReportSessionId citext NOT NULL)]]></postgres>
+  </query>
+  <query key="SelectDataFromTable">
+    <default><![CDATA[select *
+from ClassModule_Reports_ConnectedDepartmentOnEDM
+where ReportSessionId = @ReportSessionId
+order by BusinessUnit desc]]></default>
+  </query>
+</queries>

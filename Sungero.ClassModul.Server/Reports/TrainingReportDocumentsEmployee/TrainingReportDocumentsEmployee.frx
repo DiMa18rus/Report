@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;Sungero.ClassModul.Shared&#13;&#10;Sungero.ClassModul.Server" ReportInfo.CreatorVersion="2020.2.12.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = Sungero.ClassModul.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="TableDocumentsEmployee" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDocuments}">
+        <Column Name="AutorDocument" DataType="System.String" PropName="Column"/>
+        <Column Name="DocumentId" DataType="System.String" PropName="Column1"/>
+        <Column Name="EmployeeId" Enabled="false" DataType="System.Int32" PropName="Column2"/>
+        <Column Name="DocumentName" DataType="System.String" PropName="Column3"/>
+        <Column Name="DateCreated" DataType="System.DateTime" PropName="Column4"/>
+        <Column Name="RegNumber" DataType="System.String" PropName="Column6"/>
+        <Column Name="KindDocument" DataType="System.String" PropName="Column"/>
+        <CommandParameter Name="EmployeeId" DataType="11" IsDbType="true" Expression="[EmployeeId]"/>
+        <CommandParameter Name="DateStart" DataType="6" IsDbType="true" Expression="[DateStart]"/>
+        <CommandParameter Name="DateEnd" DataType="6" IsDbType="true" Expression="[DateEnd]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="adaf8b9f-c43c-4630-b558-ac265f3d57ca" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="EmployeeId" Id="5017c8b1-eb8b-451a-9cd6-38e1845ea25a" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DateStart" Id="168ad8fe-21f7-444d-b46e-cf0111e3e773" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DateEnd" Id="db7bc668-d066-4d6b-a38e-f0f359e0467e" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="56.7">
+      <TextObject Name="Text7" Width="718.2" Height="37.8" Text="Отчет" HorzAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text14" Left="151.2" Top="37.8" Width="94.5" Height="18.9" Text="[DateStart]" Font="Arial, 10pt"/>
+      <TextObject Name="Text15" Left="623.7" Top="37.8" Width="94.5" Height="18.9" Text="[DateEnd]" Font="Arial, 10pt"/>
+      <TextObject Name="Text16" Top="37.8" Width="151.2" Height="18.9" Text="Начало периуда отчета" Font="Arial, 10pt"/>
+      <TextObject Name="Text17" Left="491.4" Top="37.8" Width="132.3" Height="18.9" Text="Конец периуда отчета" Font="Arial, 10pt"/>
+    </ReportTitleBand>
+    <ColumnHeaderBand Name="ColumnHeader1" Top="60.7" Width="718.2" Height="37.8">
+      <TextObject Name="Text8" Width="94.5" Height="37.8" Border.Lines="All" Text="ИД Документа" HorzAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text9" Left="94.5" Width="113.4" Height="37.8" Border.Lines="All" Text="Автор документа" HorzAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text10" Left="207.9" Width="132.3" Height="37.8" Border.Lines="All" Text="Название документа" HorzAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text11" Left="340.2" Width="122.85" Height="37.8" Border.Lines="All" Text="Вид документа" HorzAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text12" Left="463.05" Width="132.3" Height="37.8" Border.Lines="All" Text="Рег. №" HorzAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text13" Left="595.35" Width="122.85" Height="37.8" Border.Lines="All" Text="Дата создания документа" HorzAlign="Center" Font="Arial, 10pt"/>
+    </ColumnHeaderBand>
+    <DataBand Name="Data1" Top="102.5" Width="718.2" Height="85.05" DataSource="Table">
+      <TextObject Name="Text1" Left="-9.45" Width="103.95" Height="75.6" Border.Lines="All" Text="[TableDocumentsEmployee.DocumentId]" Font="Arial, 10pt"/>
+      <TextObject Name="Text2" Left="94.5" Width="113.4" Height="75.6" Border.Lines="All" Text="[TableDocumentsEmployee.AutorDocument]" Font="Arial, 10pt"/>
+      <TextObject Name="Text3" Left="207.9" Width="132.3" Height="75.6" Border.Lines="All" Text="[TableDocumentsEmployee.DocumentName]" Font="Arial, 10pt"/>
+      <TextObject Name="Text4" Left="340.2" Width="122.85" Height="75.6" Border.Lines="All" Text="[TableDocumentsEmployee.KindDocument]" Font="Arial, 10pt"/>
+      <TextObject Name="Text5" Left="463.05" Width="132.3" Height="75.6" Border.Lines="All" Text="[TableDocumentsEmployee.RegNumber]" Font="Arial, 10pt"/>
+      <TextObject Name="Text6" Left="595.35" Width="122.85" Height="75.6" Border.Lines="All" Text="[TableDocumentsEmployee.DateCreated]" Format="Date" Format.Format="d" Font="Arial, 10pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

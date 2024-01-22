@@ -1,0 +1,50 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "842ccc2e-1129-495e-afa0-59171d4d37ae",
+  "Name": "TraningReportTasksWithAttachments",
+  "AssociatedGuid": "b8491e9e-084d-4fcb-b33c-1e421f4383d6",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [
+    {
+      "NameGuid": "445a66bb-b5f1-4d28-a079-87a1567d2d4d",
+      "Name": "Documents",
+      "EntityType": "563a1221-d3d2-41f8-8b67-287c097b4b58"
+    }
+  ],
+  "DefaultExportFormat": "Pdf",
+  "ExportFormats": [
+    "Pdf"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteClient"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "ClassModulTraningReportTasksWithAttachments",
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "DisplayName",
+    "HandledEvents",
+    "Parameters",
+    "DataSources"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "74f0d13f-8e85-40a9-80fd-3e0dd27182ae",
+      "Name": "StartDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsRequired": true,
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "74beede5-e1ef-4039-b84e-0df931688afe",
+      "Name": "EndDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsRequired": true,
+      "IsSimpleDataType": true
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "Versions": []
+}
