@@ -92,20 +92,20 @@
       <HintPath>..\Sungero.ClassModul.Libraries\PdfConverter\PdfConverter.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sungero.Workflow.Server">
-      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Server.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sungero.Workflow.Interfaces">
-      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Interfaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sungero.Reporting.Server">
       <HintPath>..\..\..\.sds\Libraries\Report\Sungero.Reporting.Server.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sungero.Reporting.Shared">
       <HintPath>..\..\..\.sds\Libraries\Report\Sungero.Reporting.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sungero.Workflow.Server">
+      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Server.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sungero.Workflow.Interfaces">
+      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sungero.Content">
@@ -137,6 +137,8 @@
     <Compile Include="Reports\TrainingReportAcquaintanceAssignedParticipantsList\TrainingReportAcquaintanceAssignedParticipantsListHandlers.cs" />
     <Compile Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDM.g.cs" />
     <Compile Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDMHandlers.cs" />
+    <Compile Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplition.g.cs" />
+    <Compile Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplitionHandlers.cs" />
     <Compile Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployee.g.cs" />
     <Compile Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployeeHandlers.cs" />
     <Compile Include="Reports\TraningReportTasksWithAttachments\TraningReportTasksWithAttachments.g.cs" />
@@ -164,6 +166,8 @@
     <EmbeddedResource Include="Reports\TrainingReportAcquaintanceAssignedParticipantsList\TrainingReportAcquaintanceAssignedParticipantsListQueries.xml" />
     <EmbeddedResource Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDM.frx" />
     <EmbeddedResource Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDMQueries.xml" />
+    <EmbeddedResource Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplition.frx" />
+    <EmbeddedResource Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplitionQueries.xml" />
     <EmbeddedResource Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployee.frx" />
     <EmbeddedResource Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployeeQueries.xml" />
     <EmbeddedResource Include="Reports\TraningReportTasksWithAttachments\TraningReportTasksWithAttachments.frx" />

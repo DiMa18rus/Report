@@ -41,6 +41,15 @@
       },
       {
         "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
+        "NameGuid": "8712a459-8b40-4066-99e9-5d4b2635acf1",
+        "Name": "StartTrainingReprtDepartmentsAssignmentComplition",
+        "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
+        "GroupId": "e205a077-299b-4b0e-ad13-4fa60e33222a",
+        "PreviousItemGuid": "ec7fbaa9-e4f4-441c-9c87-17cb733cec53",
+        "ReportId": "384f4625-c282-43e4-896d-9b352a351de0"
+      },
+      {
+        "$type": "Sungero.Metadata.CoverReportActionMetadata, Sungero.Reporting.Shared",
         "NameGuid": "d2ac02f7-9ef0-4777-9566-f960e7f11ae8",
         "Name": "Action",
         "CoverActionPresenterTypeName": "Sungero.Reporting.Client.CoverReportActionPresenter, Sungero.Reporting.Client",
@@ -126,6 +135,10 @@
     {
       "ItemId": "05f7f8e2-cb64-4a45-b31e-119119b3ec76",
       "PreviousItemId": "842ccc2e-1129-495e-afa0-59171d4d37ae"
+    },
+    {
+      "ItemId": "384f4625-c282-43e4-896d-9b352a351de0",
+      "PreviousItemId": "05f7f8e2-cb64-4a45-b31e-119119b3ec76"
     }
   ],
   "HandledEvents": [

@@ -1,0 +1,104 @@
+{
+  "$type": "Sungero.Metadata.ReportMetadata, Sungero.Reporting.Shared",
+  "NameGuid": "384f4625-c282-43e4-896d-9b352a351de0",
+  "Name": "TrainingReportDepsartmentsAssignmentComplition",
+  "AssociatedGuid": "b8491e9e-084d-4fcb-b33c-1e421f4383d6",
+  "BaseGuid": "cef9a810-3f30-4eca-9fe3-30992af0b818",
+  "DataSources": [],
+  "DefaultExportFormat": "Pdf",
+  "ExportFormats": [
+    "Pdf"
+  ],
+  "HandledEvents": [
+    "BeforeExecuteServer",
+    "BeforeExecuteClient"
+  ],
+  "IconResourcesKeys": [],
+  "IntegrationServiceName": "ClassModulTrainingReportDepsartmentsAssignmentComplition",
+  "Overridden": [
+    "PublicConstants",
+    "PublicStructures",
+    "Parameters",
+    "HandledEvents"
+  ],
+  "Parameters": [
+    {
+      "NameGuid": "3afa3ee4-e394-4292-8477-adb54e4211b0",
+      "Name": "ReportDate",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "96e399f1-baee-49c5-94ed-f6cf9e9a1894",
+      "Name": "ParamsDescription",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "1e929425-72d0-47da-b1a2-bb2c94cfda11",
+      "Name": "PeriodBegin",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "745e1cb5-cbae-4d63-a51d-13c6c8af6fee",
+      "Name": "PeriodEnd",
+      "InternalDataTypeName": "System.DateTime",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "fcce38c3-5047-4820-9138-a9cb07209486",
+      "Name": "BusinessUnit",
+      "EntityType": "1232b91a-d27d-4587-bd50-6b0f3d8c72c8",
+      "InternalDataTypeName": "DirRX.CustomHRSolution.IBusinessUnit, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "0cd4a8d8-3968-45df-af51-e531c0f27eac",
+      "Name": "DetailedReportLink",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "edd51800-a14e-4fe5-9acd-8a47962d67f7",
+      "Name": "WithSubstitution",
+      "InternalDataTypeName": "System.Boolean",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "01ffaa7a-a112-4b9c-80c3-27d3065404bc",
+      "Name": "Unwrap",
+      "InternalDataTypeName": "System.Boolean",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "9d047be4-b3e2-4594-8a6a-4b43d3cf1ac8",
+      "Name": "WidgetParameter",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "bacc421b-97c1-4a4c-94a6-540f40675fed",
+      "Name": "Department",
+      "EntityType": "1bed5573-c7ba-469a-befc-6f18ebf7244b",
+      "InternalDataTypeName": "DirRX.CustomHRSolution.IDepartment, Sungero.Domain.Interfaces"
+    },
+    {
+      "NameGuid": "0f086107-5d7b-44b8-9aa7-99f46a4dc4b2",
+      "Name": "BusinessUnitId",
+      "InternalDataTypeName": "System.Int32",
+      "IsSimpleDataType": true
+    },
+    {
+      "NameGuid": "fc456dd7-7e59-46b6-9e47-26079f38e180",
+      "Name": "ReportSessionId",
+      "InternalDataTypeName": "System.String"
+    },
+    {
+      "NameGuid": "e461a240-ea13-487f-ae57-79cbe089aa4e",
+      "Name": "DepartmentId",
+      "InternalDataTypeName": "System.Int32",
+      "IsCollection": true,
+      "IsSimpleDataType": true
+    }
+  ],
+  "PublicStructures": [],
+  "ResourcesKeys": [],
+  "Versions": []
+}

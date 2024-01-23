@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Core.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;Sungero.Domain.Shared&#13;&#10;Sungero.CoreEntities.Shared&#13;&#10;Sungero.Reporting.Shared&#13;&#10;CommonLibrary&#13;&#10;Sungero.Domain.Interfaces&#13;&#10;Sungero.Content.Shared&#13;&#10;DirRX.CustomHRSolution.Shared&#13;&#10;DirRX.CustomHRSolution.Server&#13;&#10;Sungero.ClassModul.Shared&#13;&#10;Sungero.ClassModul.Server" ReportInfo.CreatorVersion="2020.2.12.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using DirRX.CustomHRSolution;
+using Sungero.Domain.Shared;
+using Sungero.CoreEntities;
+using Sungero.Core;
+using Resources = Sungero.ClassModul.Reports.Resources;
+
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+  </ScriptText>
+  <Dictionary>
+    <SungeroSqlDataConnection Name="Sungero_Connection" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties" ConnectionStringExpression="[SungeroConnectionString]">
+      <TableDataSource Name="Table" Alias="Departments" DataType="System.Int32" Enabled="true" CanEdit="true" SelectCommand="${SelectDepartmentsFromTempTable}">
+        <Column Name="RowIndex" DataType="System.Int32" PropName="Column"/>
+        <Column Name="ReportSessionId" DataType="System.Int32" PropName="Column"/>
+        <Column Name="Department" DataType="System.Int32" PropName="Column"/>
+        <Column Name="Unwrap" DataType="System.Boolean" PropName="Column"/>
+        <Column Name="DepartmentName" DataType="System.String" PropName="Column"/>
+        <Column Name="IsActiveDepartment" DataType="System.Boolean" PropName="Column"/>
+        <Column Name="SubDepartmentName" DataType="System.String" PropName="Column"/>
+        <Column Name="IsActiveSubDepartment" DataType="System.Boolean" PropName="Column"/>
+        <Column Name="HyperlinkBusinessUnitId" DataType="System.Int32" PropName="Column"/>
+        <Column Name="BusinessUnitName" DataType="System.String" PropName="Column1"/>
+        <Column Name="AssignmentCompletion" DataType="System.Int32" PropName="Column2"/>
+        <Column Name="AssignmentsCount" DataType="System.Int32" PropName="Column3"/>
+        <Column Name="AffectDisciplineAssignmentsCount" DataType="System.Int32" PropName="Column4"/>
+        <Column Name="CompletedInTimeAssignmentsCount" DataType="System.Int32" PropName="Column5"/>
+        <Column Name="OverdueAssignmentsCount" DataType="System.Int32" PropName="Column6"/>
+        <CommandParameter Name="ReportSessionId" DataType="11" IsDbType="true" Expression="[ReportSessionId]"/>
+      </TableDataSource>
+    </SungeroSqlDataConnection>
+    <SungeroParameter Name="SungeroConnectionString" Restrictions="DontModify, DontEdit, DontDelete, HideAllProperties, DontShow" Id="e1baf945-c0a5-4c77-b9b6-132eaaa92c87" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportDate" Id="3afa3ee4-e394-4292-8477-adb54e4211b0" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ParamsDescription" Id="96e399f1-baee-49c5-94ed-f6cf9e9a1894" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="PeriodBegin" Id="1e929425-72d0-47da-b1a2-bb2c94cfda11" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="PeriodEnd" Id="745e1cb5-cbae-4d63-a51d-13c6c8af6fee" IsRequired="false" IsCollection="false" InternalDataType="System.DateTime" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="BusinessUnit" Id="fcce38c3-5047-4820-9138-a9cb07209486" IsRequired="false" IsCollection="false" InternalDataType="DirRX.CustomHRSolution.IBusinessUnit, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="1232b91a-d27d-4587-bd50-6b0f3d8c72c8"/>
+    <SungeroParameter Name="DetailedReportLink" Id="0cd4a8d8-3968-45df-af51-e531c0f27eac" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="WithSubstitution" Id="edd51800-a14e-4fe5-9acd-8a47962d67f7" IsRequired="false" IsCollection="false" InternalDataType="System.Boolean" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Unwrap" Id="01ffaa7a-a112-4b9c-80c3-27d3065404bc" IsRequired="false" IsCollection="false" InternalDataType="System.Boolean" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="WidgetParameter" Id="9d047be4-b3e2-4594-8a6a-4b43d3cf1ac8" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="Department" Id="bacc421b-97c1-4a4c-94a6-540f40675fed" IsRequired="false" IsCollection="false" InternalDataType="DirRX.CustomHRSolution.IDepartment, Sungero.Domain.Interfaces" IsSimpleDataType="false" EntityTypeId="1bed5573-c7ba-469a-befc-6f18ebf7244b"/>
+    <SungeroParameter Name="BusinessUnitId" Id="0f086107-5d7b-44b8-9aa7-99f46a4dc4b2" IsRequired="false" IsCollection="false" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="ReportSessionId" Id="fc456dd7-7e59-46b6-9e47-26079f38e180" IsRequired="false" IsCollection="false" InternalDataType="System.String" IsSimpleDataType="false" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+    <SungeroParameter Name="DepartmentId" Id="e461a240-ea13-487f-ae57-79cbe089aa4e" IsRequired="false" IsCollection="true" InternalDataType="System.Int32" IsSimpleDataType="true" EntityTypeId="00000000-0000-0000-0000-000000000000"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8"/>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="75.6"/>
+    <PageFooterBand Name="PageFooter1" Top="153.75" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

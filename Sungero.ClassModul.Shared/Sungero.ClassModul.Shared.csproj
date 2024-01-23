@@ -45,6 +45,10 @@
     <Compile Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDMConstants.cs" />
     <Compile Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDMStructures.cs" />
     <Compile Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDMStructures.g.cs" />
+    <Compile Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplition.g.cs" />
+    <Compile Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplitionConstants.cs" />
+    <Compile Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplitionStructures.cs" />
+    <Compile Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplitionStructures.g.cs" />
     <Compile Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployee.g.cs" />
     <Compile Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployeeConstants.cs" />
     <Compile Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployeeStructures.cs" />
@@ -97,16 +101,16 @@
       <HintPath>..\..\..\.sds\Libraries\3dParty\netstandard.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sungero.Reporting.Shared">
+      <HintPath>..\..\..\.sds\Libraries\Report\Sungero.Reporting.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sungero.Workflow.Shared">
       <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Shared.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sungero.Workflow.Interfaces">
       <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Interfaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sungero.Reporting.Shared">
-      <HintPath>..\..\..\.sds\Libraries\Report\Sungero.Reporting.Shared.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sungero.Content.Shared">
@@ -134,6 +138,11 @@
     <EmbeddedResource Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDM.ru.resx" />
     <EmbeddedResource Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDMSystem.resx" />
     <EmbeddedResource Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDMSystem.ru.resx" />
+    <EmbeddedResource Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplition.mtd" />
+    <EmbeddedResource Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplition.resx" />
+    <EmbeddedResource Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplition.ru.resx" />
+    <EmbeddedResource Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplitionSystem.resx" />
+    <EmbeddedResource Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplitionSystem.ru.resx" />
     <EmbeddedResource Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployee.mtd" />
     <EmbeddedResource Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployee.resx" />
     <EmbeddedResource Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployee.ru.resx" />

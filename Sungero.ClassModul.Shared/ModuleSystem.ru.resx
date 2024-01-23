@@ -88,4 +88,7 @@
   <data name="CoverAction_StartTraningReportConnectedDepartmentOnEDM" xml:space="preserve">
     <value> Отчет по подключенным в КЭДО подразделениям/сотрудникам. Учебный отчет.</value>
   </data>
+  <data name="CoverAction_StartTrainingReprtDepartmentsAssignmentComplition" xml:space="preserve">
+    <value>Исполнительская дисциплина по департаментам. Учебный отчет.</value>
+  </data>
 </root>

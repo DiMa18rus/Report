@@ -32,6 +32,7 @@
     <Compile Include="Reports\EmployeeReport\EmployeeReport.g.cs" />
     <Compile Include="Reports\TrainingReportAcquaintanceAssignedParticipantsList\TrainingReportAcquaintanceAssignedParticipantsList.g.cs" />
     <Compile Include="Reports\TrainingReportConnectedDepartmentOnEDM\TrainingReportConnectedDepartmentOnEDM.g.cs" />
+    <Compile Include="Reports\TrainingReportDepsartmentsAssignmentComplition\TrainingReportDepsartmentsAssignmentComplition.g.cs" />
     <Compile Include="Reports\TrainingReportDocumentsEmployee\TrainingReportDocumentsEmployee.g.cs" />
     <Compile Include="Reports\TraningReportTasksWithAttachments\TraningReportTasksWithAttachments.g.cs" />
     <Compile Include="Reports\UsersConnectLC\UsersConnectLC.g.cs" />
@@ -115,20 +116,20 @@
       <HintPath>..\Sungero.ClassModul.Libraries\PdfConverter\PdfConverter.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sungero.Workflow.Client">
-      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Client.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Sungero.Workflow.Interfaces">
-      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Interfaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sungero.Reporting.Client">
       <HintPath>..\..\..\.sds\Libraries\Report\Sungero.Reporting.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sungero.Reporting.Shared">
       <HintPath>..\..\..\.sds\Libraries\Report\Sungero.Reporting.Shared.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sungero.Workflow.Client">
+      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sungero.Workflow.Interfaces">
+      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.Interfaces.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sungero.Content.Client">
@@ -139,12 +140,12 @@
       <HintPath>..\..\..\.sds\Libraries\SungeroLibrary\Sungero.Content.Shared.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sungero.Workflow.ClientBase">
-      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.ClientBase.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Sungero.Reporting.ClientBase">
       <HintPath>..\..\..\.sds\Libraries\Report\Sungero.Reporting.ClientBase.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Sungero.Workflow.ClientBase">
+      <HintPath>..\..\..\.sds\Libraries\Workflow\Sungero.Workflow.ClientBase.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Sungero.Content.ClientBase">

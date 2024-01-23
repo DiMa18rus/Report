@@ -20,6 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: InternalsVisibleTo("Sungero.ClassModul.EmployeeReport")]
 [assembly: InternalsVisibleTo("Sungero.ClassModul.TrainingReportAcquaintanceAssignedParticipantsList")]
 [assembly: InternalsVisibleTo("Sungero.ClassModul.TrainingReportConnectedDepartmentOnEDM")]
+[assembly: InternalsVisibleTo("Sungero.ClassModul.TrainingReportDepsartmentsAssignmentComplition")]
 [assembly: InternalsVisibleTo("Sungero.ClassModul.TrainingReportDocumentsEmployee")]
 [assembly: InternalsVisibleTo("Sungero.ClassModul.TraningReportTasksWithAttachments")]
 [assembly: InternalsVisibleTo("Sungero.ClassModul.UsersConnectLC")]

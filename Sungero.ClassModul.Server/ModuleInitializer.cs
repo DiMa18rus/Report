@@ -18,8 +18,13 @@ namespace Sungero.ClassModul.Server
     public virtual void CreateReportsTables()
     {
       var trainingReportConnectedDepartmentOnEDMTable = Constants.TrainingReportConnectedDepartmentOnEDM.ConnectedDepartmentOnEDMTable;
+      var trainingReportDepartmentsAssignmentComplition = Constants.TrainingReportDepsartmentsAssignmentComplition.SourceTableName;
+      
       Sungero.Docflow.PublicFunctions.Module.DropReportTempTable(trainingReportConnectedDepartmentOnEDMTable);
       Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.TrainingReportConnectedDepartmentOnEDM.CreateTableConnectedDepartmentOnEDM, new[] { trainingReportConnectedDepartmentOnEDMTable });
+      
+       Sungero.Docflow.PublicFunctions.Module.DropReportTempTable(trainingReportConnectedDepartmentOnEDMTable);
+      Sungero.Docflow.PublicFunctions.Module.ExecuteSQLCommandFormat(Queries.TrainingReportDepsartmentsAssignmentComplition.CreateSoursTable, new[] { trainingReportDepartmentsAssignmentComplition });
     }
     
   }
